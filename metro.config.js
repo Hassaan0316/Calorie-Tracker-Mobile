@@ -3,4 +3,10 @@ const { withNativeWind } = require('nativewind/metro');
 
 const config = getDefaultConfig(__dirname);
 
-module.exports = withNativeWind(config, { input: './global.css' });
+// Add resolution for node_modules
+config.resolver.extraNodeModules = {
+  ...config.resolver.extraNodeModules,
+  'redux-persist': require.resolve('redux-persist'),
+};
+
+module.exports = withNativeWind(config, { input: './styles/global.css' });

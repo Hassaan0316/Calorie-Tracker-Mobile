@@ -1,7 +1,5 @@
 import { Text, View } from 'react-native';
 
-import { EditScreenInfo } from './EditScreenInfo';
-
 type ScreenContentProps = {
   title: string;
   path: string;
@@ -10,17 +8,8 @@ type ScreenContentProps = {
 
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path={path} />
-      {children}
+    <View className="flex-1 bg-red-400 p-2">
+      <Text className="text-xl font-bold text-blue-500">Welcome to Nativewind sf!</Text>
     </View>
   );
-};
-
-const styles = {
-  container: `items-center flex-1 justify-center`,
-  separator: `h-[1px] my-7 w-4/5 bg-gray-200`,
-  title: `text-xl font-bold`,
 };
