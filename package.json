@@ -2,12 +2,9 @@
   "name": "my-expo-app",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
-    "ios": "expo start --ios",
     "start": "cross-env APP_ENV=development expo start",
     "start:staging": "cross-env APP_ENV=staging expo start",
     "start:prod": "cross-env APP_ENV=production expo start",
-    "prebuild": "expo prebuild",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "web": "expo start --web"
@@ -17,13 +14,22 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@types/redux-persist": "^4.3.1",
     "expo": "^53.0.22",
+    "expo-constants": "^17.1.7",
+    "expo-image-manipulator": "^13.1.7",
+    "expo-image-picker": "^16.1.4",
+    "expo-linking": "^7.1.7",
+    "expo-router": "5.1.5",
+    "expo-splash-screen": "^0.30.10",
     "expo-status-bar": "~2.2.3",
+    "expo-system-ui": "5.0.11",
+    "firebase": "^12.2.1",
     "nativewind": "^4.1.23",
     "react": "19.0.0",
     "react-native": "0.79.5",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "4.11.1",
     "react-native-svg": "15.11.2",
     "react-redux": "^9.2.0",
     "redux": "^5.0.1",
@@ -41,6 +47,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "~5.8.3"
   },
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "index.js",
   "private": true
 }
